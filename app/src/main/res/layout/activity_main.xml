@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- סידור כל הרכיבים במסך בצורה אנכית -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- תיבת טקסט שבה המשתמש מכניס את המספר הראשון -->
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="הכניסי מספר ראשון"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <!-- הצגת סימן הפלוס בין שני המספרים -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="30sp"
+        android:layout_gravity="center" />
+
+    <!-- תיבת טקסט שבה המשתמש מכניס את המספר השני -->
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="הכניסי מספר שני"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <!-- יצירת שורה אופקית להצגת סימן השווה והתוצאה -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <!-- הצגת סימן השווה -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="30sp" />
+
+        <!-- הצגת התוצאה לאחר לחיצה על כפתור החישוב -->
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="30sp"
+            android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <!-- כפתור שעליו לוחצים כדי לחשב את סכום שני המספרים -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="חשב"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#2196F3" />
+
+
+</LinearLayout>
